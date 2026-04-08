@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #0f172a;
+    color: #e2e8f0;
+    line-height: 1.6;
+}
+
+/* NAVBAR */
+header {
+    background: #020617;
+    padding: 15px 40px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav a {
+    color: #e2e8f0;
+    text-decoration: none;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+}
+
+.hero p {
+    margin: 20px 0;
+}
+
+.btn {
+    padding: 10px 20px;
+    background: #38bdf8;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* SECTIONS */
+section {
+    padding: 60px 40px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+/* SKILLS */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.grid div {
+    background: #1e293b;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* PROJECTS */
+.project {
+    background: #1e293b;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #020617;
+}
