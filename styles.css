@@ -671,18 +671,12 @@ p {
 }
 
 .projects-grid {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-    overflow-x: auto;
-    padding-bottom: 20px;
-    scroll-snap-type: x mandatory;
 }
 
 .project-card {
-    min-width: 350px;
-    flex: 0 0 auto;
-    scroll-snap-align: start;
     background: var(--glass-bg);
     border: 1px solid var(--glass-border);
     border-radius: var(--border-radius);
@@ -691,25 +685,6 @@ p {
     transition: all var(--transition-normal);
     position: relative;
     overflow: hidden;
-}
-
-/* Custom scrollbar for horizontal scroll */
-.projects-grid::-webkit-scrollbar {
-    height: 8px;
-}
-
-.projects-grid::-webkit-scrollbar-track {
-    background: var(--secondary-bg);
-    border-radius: 4px;
-}
-
-.projects-grid::-webkit-scrollbar-thumb {
-    background: var(--accent-primary);
-    border-radius: 4px;
-}
-
-.projects-grid::-webkit-scrollbar-thumb:hover {
-    background: var(--accent-secondary);
 }
 
 .project-card::after {
@@ -1275,12 +1250,7 @@ p {
     }
     
     .projects-grid {
-        flex-direction: column;
-        overflow-x: none;
-    }
-    
-    .project-card {
-        min-width: auto;
+        grid-template-columns: 1fr;
     }
     
     .project-filters {
