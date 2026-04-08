@@ -213,6 +213,7 @@ p {
     transition: width var(--transition-normal);
 }
 
+
 .nav-links a:hover {
     color: var(--accent-primary);
 }
