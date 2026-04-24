@@ -137,22 +137,128 @@
     <section id="about" class="about-section">
         <div class="container">
             <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-avatar">
-                    <div class="avatar-placeholder">
+            <div class="about-grid">
+                <!-- Left: Avatar/Terminal -->
+                <div class="about-visual">
+                    <div class="terminal-window about-terminal">
+                        <div class="terminal-header">
+                            <span class="terminal-dot red"></span>
+                            <span class="terminal-dot yellow"></span>
+                            <span class="terminal-dot green"></span>
+                            <span class="terminal-title">devops@portfolio:~</span>
+                        </div>
+                        <div class="terminal-body">
+                            <div class="terminal-line">
+                                <span class="terminal-prompt">$</span>
+                                <span class="terminal-command">whoami</span>
+                            </div>
+                            <div class="terminal-output">Sanjay Krishna</div>
+                            <div class="terminal-line">
+                                <span class="terminal-prompt">$</span>
+                                <span class="terminal-command">cat role.txt</span>
+                            </div>
+                            <div class="terminal-output">Cloud & DevOps Engineer</div>
+                            <div class="terminal-line">
+                                <span class="terminal-prompt">$</span>
+                                <span class="terminal-command">ls skills/</span>
+                            </div>
+                            <div class="terminal-output">AWS  Docker  Terraform  CI-CD  Nginx  Linux</div>
+                            <div class="terminal-line">
+                                <span class="terminal-prompt">$</span>
+                                <span class="terminal-command">echo $PASSION</span>
+                            </div>
+                            <div class="terminal-success">"Building scalable infrastructure"</div>
+                            <div class="terminal-line">
+                                <span class="terminal-prompt">$</span>
+                                <span class="typing-animation">_</span>
+                            </div>
+                        </div>
                     </div>
-                    <!-- Future: Replace with actual image -->
-                    <!-- <img src="your-photo.jpg" alt="Sanjay Krishna"> -->
+                    
+                    <!-- Stats -->
+                    <div class="about-stats">
+                        <div class="stat-card">
+                            <div class="stat-value">3+</div>
+                            <div class="stat-label">Projects Deployed</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">6</div>
+                            <div class="stat-label">Core Skills</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">100%</div>
+                            <div class="stat-label">Automation Focus</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="about-text">
-                    <p>I am a DevOps-focused engineer with hands-on experience in building, deploying, and managing real-world cloud systems. My expertise includes AWS infrastructure, CI/CD pipeline automation, containerized deployments, and reverse proxy configurations.</p>
-                    <p>I focus on designing scalable, efficient, and production-ready systems rather than theoretical implementations. My work involves solving real deployment challenges such as port conflicts, multi-service architecture, and infrastructure automation.</p>
+                
+                <!-- Right: Content -->
+                <div class="about-content">
+                    <div class="about-intro">
+                        <div class="intro-badge">
+                            <span class="tag">🚀 DevOps Engineer</span>
+                        </div>
+                        <h3>Building the Infrastructure of Tomorrow</h3>
+                        <p>I am a DevOps-focused engineer with hands-on experience in building, deploying, and managing real-world cloud systems. My expertise includes AWS infrastructure, CI/CD pipeline automation, containerized deployments, and reverse proxy configurations.</p>
+                    </div>
+                    
+                    <div class="about-details">
+                        <div class="detail-card">
+                            <div class="detail-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"/></svg>
+                            </div>
+                            <div class="detail-content">
+                                <h4>Cloud Infrastructure</h4>
+                                <p>Designing and managing scalable AWS environments with automated provisioning and monitoring.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-card">
+                            <div class="detail-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4c-1 0-2 .9-2 2v3.82L12 12l10-4.18V4c0-1.1-.9-2-2-2zm0 6.44l-8 3.34-8-3.34V4h16v4.44zM2 10.18v7.64c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-7.64l-10 4.18-10-4.18z"/></svg>
+                            </div>
+                            <div class="detail-content">
+                                <h4>Containerization</h4>
+                                <p>Building and deploying Docker containers with multi-service architectures using Docker Compose.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-card">
+                            <div class="detail-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 3H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H3V5h18v14zM9.5 12l2.5 3.01L16 10l4 5H4l5.5-3z"/></svg>
+                            </div>
+                            <div class="detail-content">
+                                <h4>CI/CD Automation</h4>
+                                <p>Implementing automated pipelines for seamless code integration, testing, and deployment.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-philosophy">
+                        <div class="philosophy-text">
+                            <span class="quote-icon">"</span>
+                            <p>I focus on designing scalable, efficient, and production-ready systems rather than theoretical implementations. My work involves solving real deployment challenges such as port conflicts, multi-service architecture, and infrastructure automation.</p>
+                            <span class="quote-icon end">"</span>
+                        </div>
+                    </div>
                     
                     <!-- Placeholder for Experience -->
-                    <div class="placeholder-section">
-                        <div class="placeholder-icon">
+                    <div class="experience-placeholder">
+                        <div class="placeholder-terminal">
+                            <div class="terminal-header">
+                                <span class="terminal-dot red"></span>
+                                <span class="terminal-dot yellow"></span>
+                                <span class="terminal-dot green"></span>
+                                <span class="terminal-title">work-experience.log</span>
+                            </div>
+                            <div class="terminal-body">
+                                <div class="terminal-output">Loading work experience data...</div>
+                                <div class="terminal-line">
+                                    <span class="terminal-prompt">$</span>
+                                    <span class="typing-animation">_</span>
+                                </div>
+                            </div>
                         </div>
-                        <p>Work Experience & Education details coming soon</p>
                     </div>
                 </div>
             </div>
