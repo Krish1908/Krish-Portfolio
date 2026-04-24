@@ -580,12 +580,6 @@ ul {
     position: relative;
 }
 
-.section-title::before {
-    content: '// ';
-    color: var(--accent-primary);
-    font-family: var(--font-mono);
-    font-weight: 400;
-}
 
 .section-title span {
     background: var(--accent-gradient);
