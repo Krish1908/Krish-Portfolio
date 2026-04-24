@@ -1135,6 +1135,123 @@ ul {
     transition: width 1s ease;
 }
 
+/* ===== EXPERIENCE SECTION ===== */
+.experience-section {
+    padding: 80px 0;
+}
+
+.timeline {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, var(--accent-primary), var(--accent-secondary));
+    opacity: 0.5;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 50px;
+    margin-bottom: 40px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: 7px;
+    top: 5px;
+    width: 18px;
+    height: 18px;
+    background: var(--bg-card);
+    border: 3px solid var(--accent-primary);
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.4);
+    z-index: 1;
+}
+
+.timeline-content {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    transition: all var(--transition);
+}
+
+.timeline-content:hover {
+    border-color: var(--border-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.experience-title h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.experience-title h4 {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--accent-primary);
+    font-family: var(--font-mono);
+}
+
+.experience-body > p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 16px;
+}
+
+.mini-terminal {
+    margin-top: 16px;
+    border-radius: var(--radius-md);
+}
+
+.mini-terminal .terminal-body {
+    padding: 12px 16px;
+    font-size: 0.8rem;
+}
+
+.mini-terminal ul {
+    margin-top: 8px;
+    padding-left: 0;
+}
+
+.mini-terminal li {
+    position: relative;
+    padding-left: 16px;
+    margin-bottom: 6px;
+    color: var(--text-secondary);
+}
+
+.mini-terminal li::before {
+    content: '>';
+    position: absolute;
+    left: 0;
+    color: var(--accent-primary);
+}
+
 /* ===== PROJECTS SECTION ===== */
 .projects-section {
     padding: 80px 0;
