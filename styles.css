@@ -763,6 +763,7 @@ ul {
     display: flex;
     gap: 12px;
     justify-content: center;
+    margin-top: 24px;
     margin-bottom: 2.5rem;
     flex-wrap: wrap;
 }
