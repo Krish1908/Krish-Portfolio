@@ -13,6 +13,41 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Background Elements -->
+    <div class="bg-elements">
+        <div class="bg-element">docker build -t app .</div>
+        <div class="bg-element">kubectl apply -f deploy.yaml</div>
+        <div class="bg-element">terraform apply</div>
+        <div class="bg-element">git push origin main</div>
+        <div class="bg-element">docker-compose up -d</div>
+        <div class="bg-element">npm run build</div>
+        <div class="bg-element">systemctl restart nginx</div>
+        <div class="bg-element">aws ec2 run-instances</div>
+        <div class="bg-element">helm install release</div>
+        <div class="bg-element">ssh user@server</div>
+    </div>
+
+    <!-- Network Background -->
+    <div class="network-bg">
+        <div class="network-node"></div>
+        <div class="network-node"></div>
+        <div class="network-node"></div>
+        <div class="network-node"></div>
+        <div class="network-node"></div>
+        <div class="network-node"></div>
+        <div class="network-node"></div>
+        <div class="network-node"></div>
+    </div>
+
+    <!-- Network Lines SVG -->
+    <svg class="network-lines" width="100%" height="100%">
+        <line class="network-line" x1="20%" y1="15%" x2="60%" y2="25%" />
+        <line class="network-line" x1="60%" y1="25%" x2="80%" y2="40%" />
+        <line class="network-line" x1="30%" y1="55%" x2="70%" y2="70%" />
+        <line class="network-line" x1="40%" y1="85%" x2="20%" y2="35%" />
+        <line class="network-line" x1="90%" y1="60%" x2="70%" y2="70%" />
+    </svg>
+
     <!-- NAVBAR -->
     <header class="navbar">
         <nav>
@@ -37,17 +72,44 @@
     <section id="home" class="hero">
         <div class="hero-content">
             <div class="hero-badge">
-                <span class="dot"></span>
-                Available for opportunities
+                <span class="status-dot green"></span>
+                System Status: Operational
             </div>
             <h1 class="hero-title">
                 Hi, I'm <span class="highlight">Sanjay Krishna</span>
             </h1>
-            <div class="typewriter">
-                <span class="typewriter-text"></span>
-                <span class="cursor">|</span>
+            <div class="hero-subtitle">
+                <span class="typewriter-text"></span><span class="cursor">|</span>
             </div>
             <p class="hero-tagline">DevOps Engineer specializing in cloud infrastructure, CI/CD automation, and scalable system deployments.</p>
+            
+            <!-- CI/CD Pipeline Visualization -->
+            <div class="pipeline-container">
+                <div class="pipeline-stage">
+                    <div class="stage-icon">📝</div>
+                    <div class="stage-name">Code</div>
+                    <div class="stage-status">✓ Complete</div>
+                </div>
+                <div class="pipeline-connector"></div>
+                <div class="pipeline-stage">
+                    <div class="stage-icon">🔨</div>
+                    <div class="stage-name">Build</div>
+                    <div class="stage-status">✓ Complete</div>
+                </div>
+                <div class="pipeline-connector"></div>
+                <div class="pipeline-stage">
+                    <div class="stage-icon">🧪</div>
+                    <div class="stage-name">Test</div>
+                    <div class="stage-status">✓ Complete</div>
+                </div>
+                <div class="pipeline-connector"></div>
+                <div class="pipeline-stage">
+                    <div class="stage-icon">🚀</div>
+                    <div class="stage-name">Deploy</div>
+                    <div class="stage-status">✓ Complete</div>
+                </div>
+            </div>
+            
             <div class="hero-cta">
                 <a href="#projects" class="btn btn-primary">View My Work</a>
                 <a href="#contact" class="btn btn-secondary">Get In Touch</a>
@@ -68,7 +130,6 @@
             <div class="mouse">
                 <div class="wheel"></div>
             </div>
-            <span>Scroll Down</span>
         </div>
     </section>
 
@@ -79,7 +140,6 @@
             <div class="about-content">
                 <div class="about-avatar">
                     <div class="avatar-placeholder">
-                        <span>SK</span>
                     </div>
                     <!-- Future: Replace with actual image -->
                     <!-- <img src="your-photo.jpg" alt="Sanjay Krishna"> -->
@@ -91,7 +151,6 @@
                     <!-- Placeholder for Experience -->
                     <div class="placeholder-section">
                         <div class="placeholder-icon">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 6h-4V4c0-1.1-.9-2-2-2h-4c-1.1 0-2 .9-2 2v2H4c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-6 0h-4V4h4v2z"/></svg>
                         </div>
                         <p>Work Experience & Education details coming soon</p>
                     </div>
