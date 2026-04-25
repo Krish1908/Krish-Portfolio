@@ -1361,13 +1361,23 @@ ul {
     margin-bottom: 12px;
     line-height: 1.4;
     font-family: var(--font-mono);
+    height: 60px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    flex-shrink: 0;
 }
 
 .project-card > p {
     font-size: 0.85rem;
     margin-bottom: 16px;
     color: var(--text-secondary);
-    flex: 1;
+    flex: 0 0 auto;
+    height: 52px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
 }
 
 .project-features {
