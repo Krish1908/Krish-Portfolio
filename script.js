@@ -4,8 +4,6 @@ const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 const navLinksItems = document.querySelectorAll('.nav-links a');
 const typewriterElement = document.querySelector('.typewriter-text');
-const filterButtons = document.querySelectorAll('.filter-btn');
-const projectCards = document.querySelectorAll('.project-card');
 const scrollAnimateElements = document.querySelectorAll('.scroll-animate');
 
 // ===== TYPEWRITER EFFECT =====
@@ -108,27 +106,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// ===== PROJECT FILTER =====
-filterButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        // Update active button
-        filterButtons.forEach(btn => btn.classList.remove('active'));
-        button.classList.add('active');
-        
-        const filterValue = button.getAttribute('data-filter');
-        
-        projectCards.forEach(card => {
-            const categories = card.getAttribute('data-categories');
-            
-            if (filterValue === 'all' || categories.includes(filterValue)) {
-                card.classList.remove('hidden');
-                card.style.animation = 'fadeInUp 0.5s ease forwards';
-            } else {
-                card.classList.add('hidden');
-            }
-        });
-    });
-});
 
 // ===== SCROLL ANIMATIONS =====
 const observerOptions = {
@@ -235,16 +212,6 @@ heroSection.addEventListener('mouseleave', () => {
 // ===== TILT EFFECT FOR CARDS (Disabled - user preference) =====
 // Tilt effect removed as per user feedback
 
-// ===== SCROLL TO TOP BUTTON =====
-const backToTop = document.querySelector('.back-to-top');
-
-backToTop.addEventListener('click', (e) => {
-    e.preventDefault();
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-});
 
 // ===== LOADING ANIMATION =====
 window.addEventListener('load', () => {
