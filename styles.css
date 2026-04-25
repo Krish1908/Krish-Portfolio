@@ -70,6 +70,10 @@
     border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
+[data-theme="light"] .hamburger span {
+    background: var(--text-primary);
+}
+
 [data-theme="light"] .terminal-window {
     background: #1e1e2e;
 }
@@ -1851,7 +1855,7 @@ ul {
         top: 60px;
         left: 0;
         width: 100%;
-        background: rgba(10, 10, 15, 0.98);
+        background: var(--bg-secondary);
         backdrop-filter: blur(20px);
         flex-direction: column;
         padding: 16px;
