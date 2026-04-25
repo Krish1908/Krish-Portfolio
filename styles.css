@@ -307,32 +307,32 @@ ul {
 
 .terminal-body {
     padding: 16px;
-    color: var(--text-secondary);
+    color: #cdd6f4;
     line-height: 1.8;
 }
 
 .terminal-prompt {
-    color: var(--accent-green);
+    color: #a6e3a1;
 }
 
 .terminal-command {
-    color: var(--text-primary);
+    color: #cdd6f4;
 }
 
 .terminal-output {
-    color: var(--text-muted);
+    color: #a6adc8;
 }
 
 .terminal-success {
-    color: var(--accent-green);
+    color: #a6e3a1;
 }
 
 .terminal-error {
-    color: var(--accent-red);
+    color: #f38ba8;
 }
 
 .terminal-info {
-    color: var(--accent-primary);
+    color: #89dceb;
 }
 
 /* ===== TYPING ANIMATION ===== */
@@ -963,7 +963,7 @@ ul {
 }
 
 .terminal-output {
-    color: var(--text-muted);
+    color: #a6adc8;
     margin-bottom: 12px;
     padding-left: 8px;
 }
@@ -1336,14 +1336,14 @@ ul {
     position: relative;
     padding-left: 16px;
     margin-bottom: 6px;
-    color: var(--text-secondary);
+    color: #cdd6f4;
 }
 
 .mini-terminal li::before {
     content: '>';
     position: absolute;
     left: 0;
-    color: var(--accent-primary);
+    color: #89dceb;
 }
 
 /* ===== PROJECTS SECTION ===== */
