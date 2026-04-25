@@ -1301,7 +1301,7 @@ ul {
     transition: all var(--transition);
     display: flex;
     flex-direction: column;
-    min-height: 560px;
+    min-height: 620px;
 }
 
 .project-card:hover {
@@ -1317,10 +1317,11 @@ ul {
 .project-header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 16px;
     flex-wrap: nowrap;
     gap: 12px;
+    height: 72px; /* Fixed height for consistency */
 }
 
 .project-icon {
@@ -1361,7 +1362,7 @@ ul {
     margin-bottom: 12px;
     line-height: 1.4;
     font-family: var(--font-mono);
-    height: 60px;
+    height: 56px; /* Fixed height for aligned titles */
     overflow: hidden;
     display: flex;
     align-items: flex-start;
@@ -1373,7 +1374,7 @@ ul {
     margin-bottom: 16px;
     color: var(--text-secondary);
     flex: 0 0 auto;
-    height: 52px;
+    height: 64px; /* Fixed height for aligned descriptions */
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -1381,8 +1382,8 @@ ul {
 }
 
 .project-features {
-    margin-bottom: 12px;
-    margin-top: auto;
+    margin-bottom: 16px;
+    height: 140px; /* Fixed height for aligned feature sections */
 }
 
 .project-devops {
