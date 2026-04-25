@@ -70,6 +70,10 @@
     border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
+[data-theme="light"] .hamburger span {
+    background: var(--text-primary);
+}
+
 [data-theme="light"] .terminal-window {
     background: #1e1e2e;
 }
@@ -303,32 +307,32 @@ ul {
 
 .terminal-body {
     padding: 16px;
-    color: var(--text-secondary);
+    color: #cdd6f4;
     line-height: 1.8;
 }
 
 .terminal-prompt {
-    color: var(--accent-green);
+    color: #a6e3a1;
 }
 
 .terminal-command {
-    color: var(--text-primary);
+    color: #cdd6f4;
 }
 
 .terminal-output {
-    color: var(--text-muted);
+    color: #a6adc8;
 }
 
 .terminal-success {
-    color: var(--accent-green);
+    color: #a6e3a1;
 }
 
 .terminal-error {
-    color: var(--accent-red);
+    color: #f38ba8;
 }
 
 .terminal-info {
-    color: var(--accent-primary);
+    color: #89dceb;
 }
 
 /* ===== TYPING ANIMATION ===== */
@@ -664,7 +668,7 @@ ul {
     margin: 0 auto;
     padding: 12px 24px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -687,13 +691,6 @@ ul {
 .nav-links a.active {
     color: var(--accent-primary);
     background: rgba(0, 212, 255, 0.1);
-}
-
-/* Nav controls wrapper */
-.nav-controls {
-    display: flex;
-    align-items: center;
-    gap: 8px;
 }
 
 /* ===== THEME TOGGLE BUTTON ===== */
@@ -966,7 +963,7 @@ ul {
 }
 
 .terminal-output {
-    color: var(--text-muted);
+    color: #a6adc8;
     margin-bottom: 12px;
     padding-left: 8px;
 }
@@ -1339,14 +1336,14 @@ ul {
     position: relative;
     padding-left: 16px;
     margin-bottom: 6px;
-    color: var(--text-secondary);
+    color: #cdd6f4;
 }
 
 .mini-terminal li::before {
     content: '>';
     position: absolute;
     left: 0;
-    color: var(--accent-primary);
+    color: #89dceb;
 }
 
 /* ===== PROJECTS SECTION ===== */
@@ -1858,20 +1855,23 @@ ul {
         top: 60px;
         left: 0;
         width: 100%;
-        background: rgba(10, 10, 15, 0.98);
+        background: var(--bg-secondary);
         backdrop-filter: blur(20px);
         flex-direction: column;
         padding: 16px;
         gap: 4px;
-        transform: translateY(-100%);
+        transform: translateY(-200%);
         opacity: 0;
+        pointer-events: none;     /* <-- blocks nothing when hidden */
         transition: all var(--transition);
         border-bottom: 1px solid var(--border-color);
+        z-index: 999;             /* below navbar (1000) so it never covers it */
     }
 
     .nav-links.active {
         transform: translateY(0);
         opacity: 1;
+        pointer-events: all;      /* clickable when open */
     }
 
     .nav-links a {
@@ -1882,8 +1882,23 @@ ul {
 
     .hamburger {
         display: flex;
-        position: absolute;
-        right: 16px;
+    }
+
+    .navbar nav {
+        position: relative;
+    }
+
+    /* Toggle always left, hamburger always right on mobile */
+    .theme-toggle {
+        order: -1;
+    }
+
+    .nav-links {
+        order: 0;
+    }
+
+    .hamburger {
+        order: 1;
     }
 
     .hero {
