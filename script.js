@@ -6,6 +6,25 @@ const navLinksItems = document.querySelectorAll('.nav-links a');
 const typewriterElement = document.querySelector('.typewriter-text');
 const scrollAnimateElements = document.querySelectorAll('.scroll-animate');
 
+// ===== THEME TOGGLE =====
+const themeToggle = document.getElementById('themeToggle');
+const root = document.documentElement;
+
+// Apply saved theme on load
+const savedTheme = localStorage.getItem('theme') || 'dark';
+if (savedTheme === 'light') root.setAttribute('data-theme', 'light');
+
+themeToggle.addEventListener('click', () => {
+    const isLight = root.getAttribute('data-theme') === 'light';
+    if (isLight) {
+        root.removeAttribute('data-theme');
+        localStorage.setItem('theme', 'dark');
+    } else {
+        root.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+    }
+});
+
 // ===== TYPEWRITER EFFECT =====
 const typewriterTexts = [
     'Cloud & DevOps Engineer',
