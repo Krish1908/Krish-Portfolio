@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sanjay Krishna - Cloud & DevOps Engineer specializing in cloud infrastructure, CI/CD automation, and scalable system deployments.">
+    <meta name="keywords" content="DevOps, Cloud Engineer, AWS, Docker, CI/CD, Terraform, Kubernetes, Infrastructure">
+    <meta name="author" content="Sanjay Krishna">
+    <title>Sanjay Krishna | Cloud & DevOps Engineer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Background Elements -->
+    <div class="bg-elements">
+        <div class="bg-element">docker build -t app .</div>
+        <div class="bg-element">kubectl apply -f deploy.yaml</div>
+        <div class="bg-element">terraform apply</div>
+        <div class="bg-element">git push origin main</div>
+        <div class="bg-element">docker-compose up -d</div>
+        <div class="bg-element">npm run build</div>
+        <div class="bg-element">systemctl restart nginx</div>
+        <div class="bg-element">aws ec2 run-instances</div>
+        <div class="bg-element">helm install release</div>
+        <div class="bg-element">ssh user@server</div>
+    </div>
+
+    <!-- Network Background -->
+    <div class="network-bg">
+        <div class="network-node"></div>
+        <div class="network-node"></div>
+        <div class="network-node"></div>
+        <div class="network-node"></div>
+        <div class="network-node"></div>
+        <div class="network-node"></div>
+        <div class="network-node"></div>
+        <div class="network-node"></div>
+    </div>
+
+    <!-- Network Lines SVG -->
+    <svg class="network-lines" width="100%" height="100%">
+        <line class="network-line" x1="20%" y1="15%" x2="60%" y2="25%" />
+        <line class="network-line" x1="60%" y1="25%" x2="80%" y2="40%" />
+        <line class="network-line" x1="30%" y1="55%" x2="70%" y2="70%" />
+        <line class="network-line" x1="40%" y1="85%" x2="20%" y2="35%" />
+        <line class="network-line" x1="90%" y1="60%" x2="70%" y2="70%" />
+    </svg>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#goals">Goals</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-controls">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <!-- Sun icon (shown in dark mode) -->
+                    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <!-- Moon icon (shown in light mode) -->
+                    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="status-dot green"></span>
+                System Status: Operational
+            </div>
+            <h1 class="hero-title">
+                Hi, I'm <span class="highlight">Sanjay Krishna</span>
+            </h1>
+            <div class="hero-subtitle">
+                <span class="typewriter-text"></span><span class="cursor">|</span>
+            </div>
+            <p class="hero-tagline">DevOps Engineer specializing in cloud infrastructure, CI/CD automation, and scalable system deployments.</p>
+            
+            <!-- CI/CD Pipeline Visualization -->
+            <div class="pipeline-container">
+                <div class="pipeline-stage">
+                    <div class="stage-icon">📝</div>
+                    <div class="stage-name">Code</div>
+                    <div class="stage-status">✓ Complete</div>
+                </div>
+                <div class="pipeline-connector"></div>
+                <div class="pipeline-stage">
+                    <div class="stage-icon">🔨</div>
+                    <div class="stage-name">Build</div>
+                    <div class="stage-status">✓ Complete</div>
+                </div>
+                <div class="pipeline-connector"></div>
+                <div class="pipeline-stage">
+                    <div class="stage-icon">🧪</div>
+                    <div class="stage-name">Test</div>
+                    <div class="stage-status">✓ Complete</div>
+                </div>
+                <div class="pipeline-connector"></div>
+                <div class="pipeline-stage">
+                    <div class="stage-icon">🚀</div>
+                    <div class="stage-name">Deploy</div>
+                    <div class="stage-status">✓ Complete</div>
+                </div>
+            </div>
+            
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com/Krish1908" target="_blank" class="social-link" aria-label="GitHub">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+                <a href="https://linkedin.com/in/sanjay-krishna1908" target="_blank" class="social-link" aria-label="LinkedIn">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </a>
+                <a href="mailto:tnsk1908@gmail.com" class="social-link" aria-label="Email">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l-12-9.725v15.438h24v-15.438l-12 9.725z"/></svg>
+                </a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-grid">
+                <!-- Left: Avatar/Terminal -->
+                <div class="about-visual">
+                    <div class="terminal-window about-terminal">
+                        <div class="terminal-header">
+                            <span class="terminal-dot red"></span>
+                            <span class="terminal-dot yellow"></span>
+                            <span class="terminal-dot green"></span>
+                            <span class="terminal-title">devops@portfolio:~</span>
+                        </div>
+                        <div class="terminal-body">
+                            <div class="terminal-line">
+                                <span class="terminal-prompt">$</span>
+                                <span class="terminal-command">whoami</span>
+                            </div>
+                            <div class="terminal-output">Sanjay Krishna</div>
+                            <div class="terminal-line">
+                                <span class="terminal-prompt">$</span>
+                                <span class="terminal-command">cat role.txt</span>
+                            </div>
+                            <div class="terminal-output">Cloud & DevOps Engineer</div>
+                            <div class="terminal-line">
+                                <span class="terminal-prompt">$</span>
+                                <span class="terminal-command">ls skills/</span>
+                            </div>
+                            <div class="terminal-output">AWS  Azure  Docker  Terraform  CI/CD  Nginx  Linux</div>
+                            <div class="terminal-line">
+                                <span class="terminal-prompt">$</span>
+                                <span class="terminal-command">echo $PASSION</span>
+                            </div>
+                            <div class="terminal-success">"Building scalable infrastructure"</div>
+                            <div class="terminal-line">
+                                <span class="terminal-prompt">$</span>
+                                <span class="typing-animation">_</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Stats -->
+                    <div class="about-stats">
+                        <div class="stat-card">
+                            <div class="stat-value">5+</div>
+                            <div class="stat-label">Projects Deployed</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">6</div>
+                            <div class="stat-label">Core Skills</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">100%</div>
+                            <div class="stat-label">Automation Focus</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right: Content -->
+                <div class="about-content">
+                    <div class="about-intro">
+                        <div class="intro-badge">
+                            <span class="tag">🚀 DevOps Engineer</span>
+                        </div>
+                        <h3>Building the Infrastructure of Tomorrow</h3>
+                        <p>I am a DevOps-focused engineer with hands-on experience in building, deploying, and managing real-world cloud systems. My expertise includes AWS infrastructure, CI/CD pipeline automation, containerized deployments, and reverse proxy configurations.</p>
+                    </div>
+                    
+                    <div class="about-details">
+                        <div class="detail-card">
+                            <div class="detail-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"/></svg>
+                            </div>
+                            <div class="detail-content">
+                                <h4>Cloud Infrastructure</h4>
+                                <p>Designing and managing scalable AWS environments with automated provisioning and monitoring.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-card">
+                            <div class="detail-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4c-1 0-2 .9-2 2v3.82L12 12l10-4.18V4c0-1.1-.9-2-2-2zm0 6.44l-8 3.34-8-3.34V4h16v4.44zM2 10.18v7.64c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-7.64l-10 4.18-10-4.18z"/></svg>
+                            </div>
+                            <div class="detail-content">
+                                <h4>Containerization</h4>
+                                <p>Building and deploying Docker containers with multi-service architectures using Docker Compose.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-card">
+                            <div class="detail-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 3H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H3V5h18v14zM9.5 12l2.5 3.01L16 10l4 5H4l5.5-3z"/></svg>
+                            </div>
+                            <div class="detail-content">
+                                <h4>CI/CD Automation</h4>
+                                <p>Implementing automated pipelines for seamless code integration, testing, and deployment.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="about-philosophy">
+                        <div class="philosophy-text">
+                            <span class="quote-icon">"</span>
+                            <p>I focus on designing scalable, efficient, and production-ready systems rather than theoretical implementations. My work involves solving real deployment challenges such as port conflicts, multi-service architecture, and infrastructure automation.</p>
+                            <span class="quote-icon end">"</span>
+                        </div>
+                    </div>
+
+
+                    <div class="about-philosophy">
+                        <div class="philosophy-text">
+                            <span class="quote-icon">"</span>
+                            <p>Infrastructure is not just about servers and networks — it's about enabling developers to ship code faster and more reliably.</p>
+                            <span class="quote-icon end">"</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <h2 class="section-title">Core Skills</h2>
+            <div class="skills-grid">
+                <!-- Cloud & Infrastructure -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM19 18H6c-2.21 0-4-1.79-4-4 0-2.05 1.53-3.76 3.56-3.97l1.07.18c.34.05.68-.14.81-.46.67-1.61 2.19-2.75 3.96-2.75 2.09 0 3.87 1.47 4.32 3.5.14.64.74 1.07 1.39.96C17.5 11.24 19 12.97 19 15c0 1.66-1.34 3-3 3z"/></svg>
+                    </div>
+                    <h3>Cloud & Infrastructure</h3>
+                    <ul>
+                        <li>AWS & Azure Services</li>
+                        <li>Infrastructure provisioning</li>
+                        <li>Secure access configuration</li>
+                    </ul>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 85%"></div>
+                    </div>
+                </div>
+
+                <!-- DevOps & CI/CD -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 3H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H3V5h18v14zM9.5 12l2.5 3.01L16 10l4 5H4l5.5-3z"/></svg>
+                    </div>
+                    <h3>DevOps & CI/CD</h3>
+                    <ul>
+                        <li>GitHub Actions</li>
+                        <li>Automated workflows</li>
+                        <li>Version control integration</li>
+                    </ul>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%"></div>
+                    </div>
+                </div>
+
+                <!-- Containerization -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4c-1 0-2 .9-2 2v3.82L12 12l10-4.18V4c0-1.1-.9-2-2-2zm0 6.44l-8 3.34-8-3.34V4h16v4.44zM2 10.18v7.64c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-7.64l-10 4.18-10-4.18z"/></svg>
+                    </div>
+                    <h3>Containerization</h3>
+                    <ul>
+                        <li>Docker & Docker Compose</li>
+                        <li>Multi-service architecture</li>
+                        <li>Container lifecycle management</li>
+                    </ul>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 88%"></div>
+                    </div>
+                </div>
+
+                <!-- Web Server & Networking -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.96 2.97 7.04 2.97 1 9zm8 8l3 3 3-3c-1.65-1.66-4.34-1.66-6 0zm-4-4l2 2c2.76-2.76 7.24-2.76 10 0l2-2C15.14 9.14 8.87 9.14 5 13z"/></svg>
+                    </div>
+                    <h3>Web Server & Networking</h3>
+                    <ul>
+                        <li>Nginx (reverse proxy)</li>
+                        <li>Port-based routing</li>
+                        <li>Multi-service hosting</li>
+                    </ul>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 82%"></div>
+                    </div>
+                </div>
+
+                <!-- Infrastructure as Code -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.23.09.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"/></svg>
+                    </div>
+                    <h3>Infrastructure as Code</h3>
+                    <ul>
+                        <li>Terraform</li>
+                        <li>Resource provisioning</li>
+                        <li>Controlled destruction strategies</li>
+                    </ul>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 75%"></div>
+                    </div>
+                </div>
+
+                <!-- Operating Systems -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/></svg>
+                    </div>
+                    <h3>Operating Systems</h3>
+                    <ul>
+                        <li>Linux server management</li>
+                        <li>Shell scripting</li>
+                        <li>Permissions & processes</li>
+                    </ul>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 80%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience" class="experience-section">
+        <div class="container">
+            <h2 class="section-title">Work Experience</h2>
+            <div class="timeline">
+                <!-- Staunch Experience -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="experience-header">
+                            <div class="experience-title">
+                                <h3>Cloud & DevOps Engineer</h3>
+                                <h4>Staunch Technologies Pvt. Ltd.</h4>
+                            </div>
+                            <div class="experience-date">
+                                <span class="tag">Sept 2025 - Feb 2026</span>
+                            </div>
+                        </div>
+                        
+                        <div class="experience-body">
+                            <p>Sole DevOps contributor responsible for deployment automation and cloud infrastructure management across multiple in-house projects.</p>
+                            
+                            <div class="experience-details">
+                                <div class="terminal-window mini-terminal">
+                                    <div class="terminal-header">
+                                        <span class="terminal-dot red"></span>
+                                        <span class="terminal-dot yellow"></span>
+                                        <span class="terminal-dot green"></span>
+                                        <span class="terminal-title">staunch_projects.log</span>
+                                    </div>
+                                    <div class="terminal-body">
+                                        <div class="log-line">
+                                            <span class="terminal-info">[INFO]</span> Cloud Deployment & Automation
+                                        </div>
+                                        <ul>
+                                            <li>Handled cloud deployments, CI/CD automation, and Infrastructure as Code (IaC)</li>
+                                            <li>Configured and maintained CI/CD pipelines using GitHub Actions</li>
+                                            <li>Automated AWS and Azure deployments using Terraform</li>
+                                            <li>Ensured reliable and reproducible cloud infrastructure during development</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- One Yes Solutions Experience -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="experience-header">
+                            <div class="experience-title">
+                                <h3>Cloud Automation Intern</h3>
+                                <h4>One Yes Infotech Solutions</h4>
+                            </div>
+                            <div class="experience-date">
+                                <span class="tag">Sept 2025 - Jan 2026</span>
+                            </div>
+                        </div>
+                        
+                        <div class="experience-body">
+                            <p>Developed an Intent-Based Cloud Resource Provisioning system to streamline infrastructure management.</p>
+                            
+                            <div class="experience-details">
+                                <div class="terminal-window mini-terminal">
+                                    <div class="terminal-header">
+                                        <span class="terminal-dot red"></span>
+                                        <span class="terminal-dot yellow"></span>
+                                        <span class="terminal-dot green"></span>
+                                        <span class="terminal-title">one_yes_project.log</span>
+                                    </div>
+                                    <div class="terminal-body">
+                                        <div class="log-line">
+                                            <span class="terminal-info">[INFO]</span> Intent Based Cloud Provisioning
+                                        </div>
+                                        <ul>
+                                            <li>Developed a web-based cloud management dashboard automating AWS resource provisioning</li>
+                                            <li>Integrated Terraform and FastAPI with an interactive Streamlit frontend</li>
+                                            <li>Implemented secure user/admin login with OTP authentication</li>
+                                            <li>Created request approval workflows for managing EC2 and S3 without the AWS console</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            
+
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card" data-categories="aws terraform">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"/></svg>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">FastAPI</span>
+                            <span class="tag">Streamlit</span>
+                            <span class="tag">Terraform</span>
+                            <span class="tag">AWS</span>
+                        </div>
+                    </div>
+                    <h3>OneYes – Intent-Based Cloud Resource Provisioning</h3>
+                    <p>Cloud automation platform that provisions AWS resources dynamically based on user intent.</p>
+                    
+                    <div class="project-features">
+                        <h4>Key Features:</h4>
+                        <ul>
+                            <li>User authentication with OTP verification</li>
+                            <li>Dynamic EC2 and S3 provisioning</li>
+                            <li>Terraform-based automation layer</li>
+                            <li>SSH access via web UI</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="project-devops">
+                        <h4>DevOps Contributions:</h4>
+                        <ul>
+                            <li>Designed multi-service architecture</li>
+                            <li>Integrated Terraform into workflow</li>
+                            <li>Managed deployment pipelines</li>
+                            <li>Implemented AWS IAM security</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card" data-categories="docker aws">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4c-1 0-2 .9-2 2v3.82L12 12l10-4.18V4c0-1.1-.9-2-2-2zm0 6.44l-8 3.34-8-3.34V4h16v4.44zM2 10.18v7.64c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-7.64l-10 4.18-10-4.18z"/></svg>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">Nginx</span>
+                            <span class="tag">FastAPI</span>
+                            <span class="tag">Flask</span>
+                            <span class="tag">Django</span>
+                        </div>
+                    </div>
+                    <h3>Multi-Service Deployment System</h3>
+                    <p>Deployed multiple backend services on a single infrastructure using Nginx as reverse proxy.</p>
+                    
+                    <div class="project-features">
+                        <h4>Key Features:</h4>
+                        <ul>
+                            <li>Port-based routing (8080, 8081, 8082)</li>
+                            <li>Centralized Nginx configuration</li>
+                            <li>Parallel service hosting</li>
+                            <li>Docker Compose orchestration</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="project-devops">
+                        <h4>DevOps Contributions:</h4>
+                        <ul>
+                            <li>Configured Nginx reverse proxy</li>
+                            <li>Managed port mappings</li>
+                            <li>Created Docker networks</li>
+                            <li>Multi-environment deployment</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card" data-categories="cicd aws">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 3H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H3V5h18v14zM9.5 12l2.5 3.01L16 10l4 5H4l5.5-3z"/></svg>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">GitHub Actions</span>
+                            <span class="tag">CI/CD</span>
+                            <span class="tag">AWS</span>
+                            <span class="tag">Automation</span>
+                        </div>
+                    </div>
+                    <h3>CI/CD Pipeline Automation</h3>
+                    <p>Automated CI/CD pipelines for applications using GitHub Actions with AWS integration.</p>
+                    
+                    <div class="project-features">
+                        <h4>Key Features:</h4>
+                        <ul>
+                            <li>Automatic deployment on push</li>
+                            <li>Multi-stage pipeline</li>
+                            <li>Environment-specific configs</li>
+                            <li>Automated testing</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="project-devops">
+                        <h4>DevOps Contributions:</h4>
+                        <ul>
+                            <li>Designed pipeline workflows</li>
+                            <li>Integrated AWS CLI</li>
+                            <li>Configured OIDC authentication</li>
+                            <li>Artifact caching</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DEPLOYMENT EXPERIENCE -->
+    <section id="deployment" class="deployment-section">
+        <div class="container">
+            <h2 class="section-title">Deployment Experience</h2>
+            <div class="deployment-grid">
+                <div class="deployment-card">
+                    <div class="deployment-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"/></svg>
+                    </div>
+                    <h3>Cloud Deployment</h3>
+                    <ul>
+                        <li>Hosted applications on</li>
+                        <li>AWS EC2 and Azure VM</li>
+                        <li>Configured Nginx for public access</li>
+                        <li>Managed domain & IP-based routing</li>
+                    </ul>
+                </div>
+                
+                <div class="deployment-card">
+                    <div class="deployment-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/></svg>
+                    </div>
+                    <h3>On-Prem Deployment</h3>
+                    <ul>
+                        <li>Replicated cloud architecture locally</li>
+                        <li>Managed internal and external access</li>
+                        <li>Compared deployment strategies</li>
+                    </ul>
+                </div>
+                
+                <div class="deployment-card">
+                    <div class="deployment-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                    </div>
+                    <h3>System Architecture</h3>
+                    <ul>
+                        <li>Multi-service architecture design</li>
+                        <li>Frontend-backend separation</li>
+                        <li>Reverse proxy-based routing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ACHIEVEMENTS SECTION -->
+    <section id="achievements" class="achievements-section">
+        <div class="container">
+            <h2 class="section-title">Key Achievements</h2>
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <div class="achievement-number">1</div>
+                    <div class="achievement-text">Successfully deployed multi-service applications in both cloud and on-prem environments</div>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-number">2</div>
+                    <div class="achievement-text">Built and integrated CI/CD pipelines for automated deployments</div>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-number">3</div>
+                    <div class="achievement-text">Developed a cloud provisioning platform with real AWS integration</div>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-number">4</div>
+                    <div class="achievement-text">Solved real-world DevOps challenges (port conflicts, dependency issues, infra structuring)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FUTURE GOALS SECTION -->
+    <section id="goals" class="goals-section">
+        <div class="container">
+            <h2 class="section-title">Future Goals</h2>
+            <div class="goals-timeline">
+                <div class="goal-item">
+                    <div class="goal-marker"></div>
+                    <div class="goal-content">
+                        <h3>Kubernetes Orchestration</h3>
+                        <p>Implement Kubernetes-based container orchestration for scalable deployments</p>
+                    </div>
+                </div>
+                <div class="goal-item">
+                    <div class="goal-marker"></div>
+                    <div class="goal-content">
+                        <h3>DevSecOps Practices</h3>
+                        <p>Enhance security practices throughout the DevOps pipeline</p>
+                    </div>
+                </div>
+                <div class="goal-item">
+                    <div class="goal-marker"></div>
+                    <div class="goal-content">
+                        <h3>Multi-Cloud Systems</h3>
+                        <p>Build provisioning systems across AWS, Azure, and GCP</p>
+                    </div>
+                </div>
+                <div class="goal-item">
+                    <div class="goal-marker"></div>
+                    <div class="goal-content">
+                        <h3>Monitoring & Observability</h3>
+                        <p>Add comprehensive monitoring and observability systems</p>
+                    </div>
+                </div>
+                <div class="goal-item">
+                    <div class="goal-marker"></div>
+                    <div class="goal-content">
+                        <h3>Automation & Scalability</h3>
+                        <p>Improve automation and scalability of deployments</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <a href="mailto:tnsk1908@gmail.com">tnsk1908@gmail.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.04C6.5 2.04 2 6.53 2 12.06c0 4.99 3.66 9.12 8.44 9.88v-6.96H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.89 3.78-3.89 1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.91h-2.33v6.96C18.34 21.18 22 17.05 22 12.06c0-5.53-4.5-10.02-10-10.02z"/></svg>
+                        </div>
+                        <div class="contact-details">
+                            <h4>GitHub</h4>
+                            <a href="https://github.com/Krish1908" target="_blank">github.com/Krish1908</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        </div>
+                        <div class="contact-details">
+                            <h4>LinkedIn</h4>
+                            <a href="https://linkedin.com/in/sanjay-krishna1908" target="_blank">linkedin.com/in/sanjay-krishna1908</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Placeholder for Contact Form -->
+                <div class="contact-form-placeholder">
+                    <div class="placeholder-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                    </div>
+                    <p>Contact form coming soon</p>
+                    <p class="small">Feel free to reach out via email or social media</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
