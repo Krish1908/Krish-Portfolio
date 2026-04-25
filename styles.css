@@ -1860,6 +1860,58 @@ ul {
         width: 20px;
         height: 20px;
     }
+
+    /* Project Cards Mobile optimization */
+    .project-card {
+        min-height: auto;
+        padding: 20px;
+    }
+
+    .project-header {
+        height: auto;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .project-card h3 {
+        height: auto;
+        margin-bottom: 8px;
+    }
+
+    .project-card > p {
+        height: auto;
+        margin-bottom: 12px;
+    }
+
+    .project-features {
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .project-tags {
+        width: 100%;
+    }
+
+    .timeline-item {
+        padding-left: 30px;
+    }
+
+    .timeline::before {
+        left: 8px;
+    }
+
+    .timeline-dot {
+        left: 0px;
+    }
+
+    /* Background optimization for performance */
+    .bg-elements {
+        display: none;
+    }
+
+    .network-lines {
+        opacity: 0.3;
+    }
 }
 
 /* ===== ANIMATIONS ===== */
