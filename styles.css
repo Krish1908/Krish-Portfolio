@@ -935,6 +935,33 @@ ul {
     transform: translateY(-2px);
 }
 
+.btn-resume {
+    background: transparent;
+    color: var(--accent-green);
+    border: 1px solid var(--accent-green);
+    gap: 8px;
+}
+
+.btn-resume svg {
+    width: 16px;
+    height: 16px;
+    stroke: currentColor;
+    flex-shrink: 0;
+    transition: transform var(--transition);
+}
+
+.btn-resume:hover {
+    background: rgba(16, 185, 129, 0.12);
+    border-color: var(--accent-green);
+    color: var(--accent-green);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(16, 185, 129, 0.2);
+}
+
+.btn-resume:hover svg {
+    transform: translateY(2px);
+}
+
 /* ===== ABOUT SECTION ===== */
 .about-section {
     padding: 80px 0;
