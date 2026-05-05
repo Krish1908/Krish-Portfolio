@@ -356,16 +356,32 @@ if (contactForm) {
         e.preventDefault();
 
         // Basic validation
-        const name    = document.getElementById('from_name').value.trim();
-        const email   = document.getElementById('from_email').value.trim();
-        const mobile  = document.getElementById('mobile').value.trim();
-        const subject = document.getElementById('subject').value.trim();
-        const message = document.getElementById('message').value.trim();
+        const name         = document.getElementById('from_name').value.trim();
+        const email        = document.getElementById('from_email').value.trim();
+        const country_code = document.getElementById('country_code').value;
+        const mobile       = document.getElementById('mobile').value.trim();
+        const subject      = document.getElementById('subject').value.trim();
+        const message      = document.getElementById('message').value.trim();
 
         if (!name || !email || !subject || !message) {
             formStatus.className = 'form-status error';
-            formStatus.textContent = '✗ Please fill in all fields.';
+            formStatus.textContent = '✗ Please fill in all required fields.';
             return;
+        }
+
+        // Mobile validation (optional field — only validate if filled)
+        if (mobile) {
+            const digitsOnly = mobile.replace(/[\s\-().]/g, '');
+            if (!/^\d+$/.test(digitsOnly)) {
+                formStatus.className = 'form-status error';
+                formStatus.textContent = '✗ Mobile number must contain digits only.';
+                return;
+            }
+            if (digitsOnly.length < 7 || digitsOnly.length > 15) {
+                formStatus.className = 'form-status error';
+                formStatus.textContent = '✗ Mobile number must be 7–15 digits.';
+                return;
+            }
         }
 
         // Loading state
@@ -375,11 +391,12 @@ if (contactForm) {
         formStatus.textContent = '';
 
         const templateParams = {
-            name:    name,
-            email:   email,
-            mobile:  mobile || 'Not provided',
-            subject: subject,
-            message: message,
+            name:         name,
+            email:        email,
+            country_code: mobile ? country_code : '',
+            mobile:       mobile || 'Not provided',
+            subject:      subject,
+            message:      message,
         };
 
         emailjs.send('service_yvez5q6', 'template_auaz8v8', templateParams)

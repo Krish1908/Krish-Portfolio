@@ -852,8 +852,22 @@
                             <input type="text" id="from_name" name="from_name" placeholder="John Doe" required autocomplete="name">
                         </div>
                         <div class="form-group">
-                            <label for="mobile">Mobile</label>
-                            <input type="tel" id="mobile" name="mobile" placeholder="+91 98765 43210" autocomplete="tel">
+                            <label for="mobile">Mobile <span style="font-size:0.7rem; opacity:0.6;">(optional)</span></label>
+                            <div class="phone-group">
+                                <select id="country_code" name="country_code" class="country-select">
+                                    <option value="+91">🇮🇳 +91</option>
+                                    <option value="+1">🇺🇸 +1</option>
+                                    <option value="+44">🇬🇧 +44</option>
+                                    <option value="+61">🇦🇺 +61</option>
+                                    <option value="+65">🇸🇬 +65</option>
+                                    <option value="+971">🇦🇪 +971</option>
+                                    <option value="+60">🇲🇾 +60</option>
+                                    <option value="+49">🇩🇪 +49</option>
+                                    <option value="+33">🇫🇷 +33</option>
+                                    <option value="+81">🇯🇵 +81</option>
+                                </select>
+                                <input type="tel" id="mobile" name="mobile" placeholder="98765 43210" autocomplete="tel">
+                            </div>
                         </div>
                     </div>
                     <div class="form-group">
