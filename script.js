@@ -343,3 +343,58 @@ function throttle(func, limit) {
 window.addEventListener('scroll', throttle(() => {
     // Any heavy scroll operations can go here
 }, 100));
+
+// ===== CONTACT FORM (EMAILJS) =====
+emailjs.init('F2C8G6XHddb45MXDM');
+
+const contactForm = document.getElementById('contactForm');
+const submitBtn   = document.getElementById('submitBtn');
+const formStatus  = document.getElementById('formStatus');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        // Basic validation
+        const name    = document.getElementById('from_name').value.trim();
+        const email   = document.getElementById('from_email').value.trim();
+        const mobile  = document.getElementById('mobile').value.trim();
+        const subject = document.getElementById('subject').value.trim();
+        const message = document.getElementById('message').value.trim();
+
+        if (!name || !email || !subject || !message) {
+            formStatus.className = 'form-status error';
+            formStatus.textContent = '✗ Please fill in all fields.';
+            return;
+        }
+
+        // Loading state
+        submitBtn.disabled = true;
+        submitBtn.querySelector('.btn-text').textContent = 'Sending...';
+        formStatus.className = 'form-status';
+        formStatus.textContent = '';
+
+        const templateParams = {
+            name:    name,
+            email:   email,
+            mobile:  mobile || 'Not provided',
+            subject: subject,
+            message: message,
+        };
+
+        emailjs.send('service_yvez5q6', 'template_auaz8v8', templateParams)
+            .then(() => {
+                formStatus.className = 'form-status success';
+                formStatus.textContent = "✓ Message sent! I'll get back to you soon.";
+                contactForm.reset();
+            })
+            .catch((err) => {
+                formStatus.className = 'form-status error';
+                formStatus.textContent = `✗ Failed to send: ${err.text || 'Please try again.'}`;
+            })
+            .finally(() => {
+                submitBtn.disabled = false;
+                submitBtn.querySelector('.btn-text').textContent = 'Send Message';
+            });
+    });
+}
