@@ -180,13 +180,13 @@ window.addEventListener('scroll', () => {
         const sectionHeight = section.offsetHeight;
         const sectionTop = section.offsetTop - 100;
         const sectionId = section.getAttribute('id');
-        const navLink = document.querySelector(`.nav-links-main a[href="#${sectionId}"], .nav-dropdown a[href="#${sectionId}"]`);
+        const matchedLinks = document.querySelectorAll(`.nav-links-main a[href="#${sectionId}"], .nav-dropdown a[href="#${sectionId}"]`);
         
         if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
             navLinksItems.forEach(link => link.style.color = '');
-            if (navLink) {
-                navLink.style.color = 'var(--accent-primary)';
-            }
+            matchedLinks.forEach(link => {
+                link.style.color = 'var(--accent-primary)';
+            });
         }
     });
 });

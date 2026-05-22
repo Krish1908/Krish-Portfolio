@@ -722,6 +722,13 @@ ul {
     list-style: none;
     padding: 0;
     margin: 0;
+}
+
+.nav-dropdown .mobile-only-links {
+    display: none;
+}
+
+.nav-dropdown .desktop-only-links {
     display: flex;
     flex-direction: column;
 }
@@ -2447,6 +2454,7 @@ ul {
     font-size: 0.9rem;
     color: var(--text-primary);
     font-family: var(--font-mono);
+    word-break: break-all;
 }
 
 .contact-form-placeholder {
@@ -2658,6 +2666,12 @@ ul {
     .form-row {
         grid-template-columns: 1fr;
     }
+    .contact-form {
+        padding: 20px 16px;
+    }
+    .stat-card {
+        padding: 16px 12px;
+    }
 }
 
 /* ===== FOOTER ===== */
@@ -2716,13 +2730,7 @@ ul {
 
 @media (max-width: 768px) {
     .nav-links-main {
-        display: flex;
-        gap: 2px;
-    }
-
-    .nav-links-main a {
-        font-size: 0.72rem;
-        padding: 6px 8px;
+        display: none;
     }
 
     .hamburger {
@@ -2738,10 +2746,6 @@ ul {
         order: -1;
     }
 
-    .nav-links-main {
-        order: 0;
-    }
-
     .hamburger {
         order: 1;
     }
@@ -2749,6 +2753,15 @@ ul {
     .nav-dropdown {
         right: 16px;
         min-width: 160px;
+    }
+
+    .nav-dropdown .desktop-only-links {
+        display: none;
+    }
+
+    .nav-dropdown .mobile-only-links {
+        display: flex;
+        flex-direction: column;
     }
 
     .hero {
@@ -2835,7 +2848,8 @@ ul {
     }
 
     .about-stats {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: 1fr;
+        gap: 16px;
     }
 
     .about-intro h3 {
