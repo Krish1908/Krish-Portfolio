@@ -140,7 +140,11 @@ const observer = new IntersectionObserver((entries) => {
             // Add staggered animation for children
             if (entry.target.classList.contains('skills-grid') || 
                 entry.target.classList.contains('projects-grid') ||
-                entry.target.classList.contains('achievements-grid')) {
+                entry.target.classList.contains('achievements-grid') ||
+                entry.target.classList.contains('reliability-grid') ||
+                entry.target.classList.contains('challenge-grid') ||
+                entry.target.classList.contains('deployment-grid') ||
+                entry.target.classList.contains('deployment-experience-grid')) {
                 const children = entry.target.children;
                 Array.from(children).forEach((child, index) => {
                     child.style.animationDelay = `${index * 0.1}s`;
@@ -158,31 +162,12 @@ document.querySelectorAll('section').forEach(section => {
 });
 
 // Observe individual cards
-document.querySelectorAll('.skill-card, .project-card, .deployment-card, .achievement-card, .goal-item').forEach(card => {
+document.querySelectorAll('.skill-card, .project-card, .deployment-card-real, .achievement-card, .reliability-card, .challenge-card, .dep-exp-card, .education-card, .certification-card').forEach(card => {
     card.classList.add('scroll-animate');
     observer.observe(card);
 });
 
-// ===== SKILL BARS ANIMATION =====
-const skillBarsObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const skillBar = entry.target.querySelector('.skill-progress');
-            if (skillBar) {
-                const width = skillBar.style.width;
-                skillBar.style.width = '0';
-                setTimeout(() => {
-                    skillBar.style.width = width;
-                }, 100);
-            }
-            skillBarsObserver.unobserve(entry.target);
-        }
-    });
-}, { threshold: 0.5 });
-
-document.querySelectorAll('.skill-card').forEach(card => {
-    skillBarsObserver.observe(card);
-});
+// Skill progress animation removed (bars replaced by badges)
 
 // ===== ACTIVE NAVIGATION LINK =====
 const sections = document.querySelectorAll('section[id]');
@@ -289,22 +274,26 @@ document.querySelectorAll('.achievement-card').forEach(card => {
     achievementObserver.observe(card);
 });
 
-// ===== GOALS TIMELINE ANIMATION ON SCROLL =====
-const goalsSection = document.querySelector('.goals-section');
-const goalItems = document.querySelectorAll('.goal-item');
+// ===== ARCHITECTURE GALLERY TABS =====
+const tabBtns = document.querySelectorAll('.arch-tab-btn');
+const tabPanes = document.querySelectorAll('.arch-pane');
 
-const goalsObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            goalItems.forEach((item, index) => {
-                item.style.animationDelay = `${index * 0.15}s`;
-            });
-        }
+if (tabBtns.length > 0) {
+    tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Remove active class from all buttons and panes
+            tabBtns.forEach(b => b.classList.remove('active'));
+            tabPanes.forEach(p => p.classList.remove('active'));
+            
+            // Add active class to clicked button and target pane
+            btn.classList.add('active');
+            const targetId = `pane-${btn.getAttribute('data-tab')}`;
+            const targetPane = document.getElementById(targetId);
+            if (targetPane) {
+                targetPane.classList.add('active');
+            }
+        });
     });
-}, { threshold: 0.2 });
-
-if (goalsSection) {
-    goalsObserver.observe(goalsSection);
 }
 
 // ===== CONSOLE EASTER EGG =====
