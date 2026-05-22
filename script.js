@@ -297,6 +297,18 @@ if (tabBtns.length > 0) {
     });
 }
 
+// ===== DIAGRAM REDIRECTION TAB-SWITCHING =====
+document.querySelectorAll('a[data-target-tab]').forEach(link => {
+    link.addEventListener('click', () => {
+        const tabName = link.getAttribute('data-target-tab');
+        const targetBtn = document.querySelector(`.arch-tab-btn[data-tab="${tabName}"]`);
+        if (targetBtn) {
+            targetBtn.click();
+        }
+    });
+});
+
+
 // ===== CONSOLE EASTER EGG =====
 console.log('%c👋 Hello, Developer!', 'font-size: 24px; font-weight: bold; color: #38bdf8;');
 console.log('%cWelcome to Sanjay Krishna\'s Portfolio', 'font-size: 14px; color: #94a3b8;');
