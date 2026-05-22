@@ -672,12 +672,12 @@ ul {
     align-items: center;
 }
 
-.nav-links {
+.nav-links-main {
     display: flex;
     gap: 4px;
 }
 
-.nav-links a {
+.nav-links-main a {
     color: var(--text-secondary);
     font-weight: 500;
     font-size: 0.85rem;
@@ -687,10 +687,60 @@ ul {
     font-family: var(--font-mono);
 }
 
-.nav-links a:hover,
-.nav-links a.active {
+.nav-links-main a:hover,
+.nav-links-main a.active {
     color: var(--accent-primary);
     background: rgba(0, 212, 255, 0.1);
+}
+
+/* Dropdown Menu styling */
+.nav-dropdown {
+    position: absolute;
+    top: calc(100% - 6px);
+    right: 24px;
+    background: rgba(10, 10, 15, 0.95);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 8px 0;
+    min-width: 180px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transform: translateY(-10px);
+    opacity: 0;
+    pointer-events: none;
+    transition: all var(--transition);
+    z-index: 999;
+}
+
+.nav-dropdown.active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: all;
+}
+
+.nav-dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-dropdown ul li a {
+    display: block;
+    color: var(--text-secondary);
+    font-weight: 500;
+    font-size: 0.85rem;
+    padding: 10px 20px;
+    transition: all var(--transition);
+    font-family: var(--font-mono);
+    text-decoration: none;
+}
+
+.nav-dropdown ul li a:hover,
+.nav-dropdown ul li a.active {
+    color: var(--accent-primary);
+    background: rgba(0, 212, 255, 0.08);
 }
 
 /* ===== THEME TOGGLE BUTTON ===== */
@@ -733,11 +783,12 @@ ul {
 
 /* Hamburger */
 .hamburger {
-    display: none;
+    display: flex;
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
     padding: 8px;
+    z-index: 1001;
 }
 
 .hamburger span {
@@ -2058,8 +2109,13 @@ ul {
     flex-direction: column;
     align-items: center;
     font-family: var(--font-mono);
-    font-size: 0.65rem;
+    font-size: 1.25rem;
     color: var(--text-muted);
+}
+
+.diag-arrow span {
+    font-size: 0.65rem;
+    margin-bottom: 2px;
 }
 
 .diag-split-arrows {
@@ -2074,7 +2130,12 @@ ul {
 .diag-split-arrow {
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 6px;
+    font-size: 1.2rem;
+}
+
+.diag-split-arrow span {
+    font-size: 0.65rem;
 }
 
 .diag-servers-group {
@@ -2095,11 +2156,15 @@ ul {
 
 .diag-arrow-down, .diag-arrow-up {
     font-family: var(--font-mono);
-    font-size: 0.65rem;
+    font-size: 1.2rem;
     color: var(--text-muted);
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.diag-arrow-down span, .diag-arrow-up span {
+    font-size: 0.65rem;
 }
 
 .diag-split-arrows-three {
@@ -2114,7 +2179,12 @@ ul {
 .diag-path {
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 6px;
+    font-size: 1.2rem;
+}
+
+.diag-path span {
+    font-size: 0.65rem;
 }
 
 .diag-container-stack {
@@ -2168,7 +2238,7 @@ ul {
 
 .diag-arrow-right {
     font-family: var(--font-mono);
-    font-size: 0.65rem;
+    font-size: 1.25rem;
     color: var(--text-muted);
 }
 
@@ -2244,8 +2314,11 @@ ul {
     border-radius: var(--radius-lg);
     padding: 24px;
     display: flex;
-    align-items: flex-start;
-    gap: 16px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 12px;
     transition: all var(--transition);
 }
 
@@ -2642,34 +2715,14 @@ ul {
 }
 
 @media (max-width: 768px) {
-    .nav-links {
-        position: fixed;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background: var(--bg-secondary);
-        backdrop-filter: blur(20px);
-        flex-direction: column;
-        padding: 16px;
-        gap: 4px;
-        transform: translateY(-200%);
-        opacity: 0;
-        pointer-events: none;     /* <-- blocks nothing when hidden */
-        transition: all var(--transition);
-        border-bottom: 1px solid var(--border-color);
-        z-index: 999;             /* below navbar (1000) so it never covers it */
+    .nav-links-main {
+        display: flex;
+        gap: 2px;
     }
 
-    .nav-links.active {
-        transform: translateY(0);
-        opacity: 1;
-        pointer-events: all;      /* clickable when open */
-    }
-
-    .nav-links a {
-        width: 100%;
-        text-align: center;
-        padding: 12px;
+    .nav-links-main a {
+        font-size: 0.72rem;
+        padding: 6px 8px;
     }
 
     .hamburger {
@@ -2685,12 +2738,17 @@ ul {
         order: -1;
     }
 
-    .nav-links {
+    .nav-links-main {
         order: 0;
     }
 
     .hamburger {
         order: 1;
+    }
+
+    .nav-dropdown {
+        right: 16px;
+        min-width: 160px;
     }
 
     .hero {

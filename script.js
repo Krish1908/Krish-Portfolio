@@ -1,8 +1,8 @@
 // ===== DOM ELEMENTS =====
 const navbar = document.querySelector('.navbar');
 const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
-const navLinksItems = document.querySelectorAll('.nav-links a');
+const navDropdown = document.getElementById('navDropdown');
+const navLinksItems = document.querySelectorAll('.nav-links-main a, .nav-dropdown a');
 const typewriterElement = document.querySelector('.typewriter-text');
 const scrollAnimateElements = document.querySelectorAll('.scroll-animate');
 
@@ -69,25 +69,26 @@ function typeWriter() {
 // Start typewriter effect after a short delay
 setTimeout(typeWriter, 1000);
 
-// ===== MOBILE NAVIGATION =====
-hamburger.addEventListener('click', () => {
+// ===== NAVIGATION DROPDOWN =====
+hamburger.addEventListener('click', (e) => {
+    e.stopPropagation();
     hamburger.classList.toggle('active');
-    navLinks.classList.toggle('active');
+    navDropdown.classList.toggle('active');
 });
 
-// Close mobile menu when clicking a link
+// Close dropdown when clicking a link
 navLinksItems.forEach(link => {
     link.addEventListener('click', () => {
         hamburger.classList.remove('active');
-        navLinks.classList.remove('active');
+        navDropdown.classList.remove('active');
     });
 });
 
-// Close mobile menu when clicking outside
+// Close dropdown when clicking outside
 document.addEventListener('click', (e) => {
-    if (!navbar.contains(e.target) && navLinks.classList.contains('active')) {
+    if (!navDropdown.contains(e.target) && !hamburger.contains(e.target) && navDropdown.classList.contains('active')) {
         hamburger.classList.remove('active');
-        navLinks.classList.remove('active');
+        navDropdown.classList.remove('active');
     }
 });
 
@@ -179,7 +180,7 @@ window.addEventListener('scroll', () => {
         const sectionHeight = section.offsetHeight;
         const sectionTop = section.offsetTop - 100;
         const sectionId = section.getAttribute('id');
-        const navLink = document.querySelector(`.nav-links a[href="#${sectionId}"]`);
+        const navLink = document.querySelector(`.nav-links-main a[href="#${sectionId}"], .nav-dropdown a[href="#${sectionId}"]`);
         
         if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
             navLinksItems.forEach(link => link.style.color = '');

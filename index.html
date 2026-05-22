@@ -79,19 +79,25 @@
                     <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                 </svg>
             </button>
-            <ul class="nav-links">
+            <ul class="nav-links-main">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#architecture">Architecture</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
+            </div>
+            <div class="nav-dropdown" id="navDropdown">
+                <ul>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#architecture">Architecture</a></li>
+                    <li><a href="#challenges">Challenges</a></li>
+                    <li><a href="#achievements">Achievements</a></li>
+                </ul>
             </div>
         </nav>
     </header>
@@ -251,7 +257,7 @@
                             <span class="tag">🚀 Cloud & DevOps Engineer</span>
                         </div>
                         <h3>Production Systems & Infrastructure Automation</h3>
-                        <p>Cloud & DevOps Engineer with hands-on experience automating AWS and Azure infrastructure using Terraform and building CI/CD pipelines with GitHub Actions. Experienced in deploying containerized applications, managing Linux servers, implementing monitoring solutions, and supporting production infrastructure. Worked as the sole DevOps engineer across multiple projects responsible for infrastructure provisioning, deployment automation, monitoring, reliability, and operational support.</p>
+                        <p>Cloud & DevOps Engineer with hands-on experience automating AWS and Azure infrastructure using Terraform and building CI/CD pipelines with GitHub Actions. Experienced in deploying containerized applications, managing Linux servers, implementing monitoring solutions, and supporting production infrastructure. Worked as the sole DevOps engineer across multiple projects and responsible for infrastructure provisioning, deployment automation, monitoring, reliability, and operational support.</p>
                     </div>
 
                     <div class="about-details">
@@ -576,52 +582,7 @@
                 <div class="reliability-card">
                     <div class="reliability-icon">🚨</div>
                     <h3>Incident Alerting</h3>
-                    <p>Configured real-time alerting channels (Slack, Email) integrated with monitoring tools for instant failure notification.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PRODUCTION CHALLENGES SOLVED SECTION -->
-    <section id="challenges" class="challenges-section">
-        <div class="container">
-            <h2 class="section-title">Production Challenges Solved</h2>
-            <div class="challenge-grid">
-                <!-- Challenge 1 -->
-                <div class="challenge-card">
-                    <h3>🌐 DNS Failure Recovery</h3>
-                    <p>Diagnosed DNS routing issues impacting application accessibility and restored service availability.</p>
-                    <span class="challenge-status resolved">✓ Resolved</span>
-                </div>
-                <!-- Challenge 2 -->
-                <div class="challenge-card">
-                    <h3>🔄 HTTP 502 Resolution</h3>
-                    <p>Resolved reverse proxy communication failures between Nginx and backend applications.</p>
-                    <span class="challenge-status resolved">✓ Resolved</span>
-                </div>
-                <!-- Challenge 3 -->
-                <div class="challenge-card">
-                    <h3>🚀 Service Startup Failures</h3>
-                    <p>Recovered applications affected by configuration drift, dependency issues, and runtime failures.</p>
-                    <span class="challenge-status resolved">✓ Resolved</span>
-                </div>
-                <!-- Challenge 4 -->
-                <div class="challenge-card">
-                    <h3>🔌 Port Conflict Resolution</h3>
-                    <p>Identified and resolved port allocation issues affecting multi-service deployments.</p>
-                    <span class="challenge-status resolved">✓ Resolved</span>
-                </div>
-                <!-- Challenge 5 -->
-                <div class="challenge-card">
-                    <h3>🧱 Firewall Troubleshooting</h3>
-                    <p>Resolved network access issues preventing service communication.</p>
-                    <span class="challenge-status resolved">✓ Resolved</span>
-                </div>
-                <!-- Challenge 6 -->
-                <div class="challenge-card">
-                    <h3>⚙️ Env Config Mismatches</h3>
-                    <p>Corrected deployment environment mismatches without requiring release rollback.</p>
-                    <span class="challenge-status resolved">✓ Resolved</span>
+                    <p>Configured real-time alerting channels (Email) integrated with monitoring tools for instant failure notification.</p>
                 </div>
             </div>
         </div>
@@ -728,6 +689,51 @@
     </section>
 
 
+    <!-- PRODUCTION CHALLENGES SOLVED SECTION -->
+    <section id="challenges" class="challenges-section">
+        <div class="container">
+            <h2 class="section-title">Production Challenges Solved</h2>
+            <div class="challenge-grid">
+                <!-- Challenge 1 -->
+                <div class="challenge-card">
+                    <h3>🌐 DNS Failure Recovery</h3>
+                    <p>Diagnosed DNS routing issues impacting application accessibility and restored service availability.</p>
+                    <span class="challenge-status resolved">✓ Resolved</span>
+                </div>
+                <!-- Challenge 2 -->
+                <div class="challenge-card">
+                    <h3>🔄 HTTP 502 Resolution</h3>
+                    <p>Resolved reverse proxy communication failures between Nginx and backend applications.</p>
+                    <span class="challenge-status resolved">✓ Resolved</span>
+                </div>
+                <!-- Challenge 3 -->
+                <div class="challenge-card">
+                    <h3>🚀 Service Startup Failures</h3>
+                    <p>Recovered applications affected by configuration drift, dependency issues, and runtime failures.</p>
+                    <span class="challenge-status resolved">✓ Resolved</span>
+                </div>
+                <!-- Challenge 4 -->
+                <div class="challenge-card">
+                    <h3>🔌 Port Conflict Resolution</h3>
+                    <p>Identified and resolved port allocation issues affecting multi-service deployments.</p>
+                    <span class="challenge-status resolved">✓ Resolved</span>
+                </div>
+                <!-- Challenge 5 -->
+                <div class="challenge-card">
+                    <h3>🧱 Firewall Troubleshooting</h3>
+                    <p>Resolved network access issues preventing service communication.</p>
+                    <span class="challenge-status resolved">✓ Resolved</span>
+                </div>
+                <!-- Challenge 6 -->
+                <div class="challenge-card">
+                    <h3>⚙️ Env Config Mismatches</h3>
+                    <p>Corrected deployment environment mismatches without requiring release rollback.</p>
+                    <span class="challenge-status resolved">✓ Resolved</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- PROJECTS SECTION -->
     <section id="projects" class="projects-section">
         <div class="container">
@@ -767,7 +773,7 @@
                             <li>Built Lambda automation engine</li>
                             <li>Implemented DNS switching logic</li>
                             <li>Designed CloudWatch workflows</li>
-                            <li>Reduced recovery downtime</li>
+                            <li>Reduced manual recovery effort through automated DNS failover workflows</li>
                         </ul>
                     </div>
 
@@ -799,7 +805,7 @@
                         </div>
                     </div>
                     <h3>OneYes – Intent-Based Cloud Resource Provisioning</h3>
-                    <p>Cloud automation platform provisioning AWS resources dynamically based on intent configuration pipelines.</p>
+                    <p>Intent-driven cloud provisioning platform that automates AWS resource creation through Terraform and API-based workflows.</p>
 
                     <div class="project-features">
                         <h4>Key Features:</h4>
@@ -856,8 +862,8 @@
                         <ul>
                             <li>Automated satellite image processing</li>
                             <li>Feature extraction pipeline</li>
-                            <li>Dynamic alerting configuration</li>
-                            <li>Predictive status reporting</li>
+                            <li>Oil spill classification</li>
+                            <li>Segmentation visualization</li>
                         </ul>
                     </div>
 
@@ -1017,69 +1023,11 @@
         </div>
     </section>
 
-    <!-- DEPLOYMENT EXPERIENCE SECTION -->
-    <section id="deployment-experience" class="deployment-experience-section">
-        <div class="container">
-            <h2 class="section-title">Deployment Operations</h2>
-            <div class="deployment-experience-grid">
-                <!-- Group 1 -->
-                <div class="dep-exp-card">
-                    <h4>Cloud Deployment</h4>
-                    <ul>
-                        <li>AWS EC2 Hosting</li>
-                        <li>Azure VM Hosting</li>
-                        <li>Domain Configuration</li>
-                        <li>Reverse Proxy Setup</li>
-                    </ul>
-                </div>
-                <!-- Group 2 -->
-                <div class="dep-exp-card">
-                    <h4>Container Deployments</h4>
-                    <ul>
-                        <li>Docker</li>
-                        <li>Docker Compose</li>
-                        <li>Multi-Service Applications</li>
-                        <li>Image Versioning</li>
-                    </ul>
-                </div>
-                <!-- Group 3 -->
-                <div class="dep-exp-card">
-                    <h4>CI/CD Operations</h4>
-                    <ul>
-                        <li>GitHub Actions</li>
-                        <li>Automated Releases</li>
-                        <li>Deployment Pipelines</li>
-                        <li>Build Automation</li>
-                    </ul>
-                </div>
-                <!-- Group 4 -->
-                <div class="dep-exp-card">
-                    <h4>Monitoring Operations</h4>
-                    <ul>
-                        <li>Prometheus</li>
-                        <li>Grafana</li>
-                        <li>CloudWatch</li>
-                        <li>Health Monitoring</li>
-                    </ul>
-                </div>
-                <!-- Group 5 -->
-                <div class="dep-exp-card">
-                    <h4>Reliability Engineering</h4>
-                    <ul>
-                        <li>Failover Automation</li>
-                        <li>Recovery Validation</li>
-                        <li>Availability Monitoring</li>
-                        <li>Incident Response</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- ACHIEVEMENTS SECTION -->
     <section id="achievements" class="achievements-section">
         <div class="container">
             <h2 class="section-title">Key Achievements</h2>
+            
             <div class="achievements-grid">
                 <div class="achievement-card">
                     <div class="achievement-number">10+</div>
@@ -1224,7 +1172,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-left">
-                    <p>&copy; 2026 Sanjay Krishna. Built with HTML, CSS, and JS. Deployed on GitHub Pages.</p>
+                    <p>&copy; 2026 Sanjay Krishna.</p>
                 </div>
                 <div class="footer-right">
                     <a href="#home" class="back-to-top">
